@@ -17,7 +17,10 @@ class PublisherFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->firstName . ' ' . $this->faker->lastName,
+            'email_address' => $this->faker->unique()->safeEmail,
+            'phone_number' => $this->faker->tollFreePhoneNumber,
+            'is_active' => $this->faker->boolean(80),
         ];
     }
 }
