@@ -18,7 +18,7 @@ class BookCategoryFactory extends Factory
     {
         return [
             'book_id' => mt_rand(1, 200),
-            'category_id' => mt_rand(1, 30),
+            'category_id' => mt_rand(1, 24),
             'is_active' => $this->faker->boolean(80),
         ];
     }
