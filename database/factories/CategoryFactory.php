@@ -17,8 +17,8 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->firstName . ' ' . $this->faker->lastName,
-            'description' => $this->faker->sentence(mt_rand(5,12), true),
+            'name' => $this->faker->randomElement(['Adventure', 'Comic', 'Crime', 'Docufiction', 'Epistolary', 'Erotic', 'Fiction', 'Fantasy', 'Historical', 'Horror', 'Magic', 'realism', 'Mystery', 'Paranoid', 'Philosophical', 'Political', 'Romance', 'Saga', 'Satire', 'Science', 'Speculative', 'Superhero', 'Thriller', 'Urban', 'Western']),
+            'description' => $this->faker->sentence(mt_rand(5, 12), true),
             'is_active' => $this->faker->boolean(80),
         ];
     }
